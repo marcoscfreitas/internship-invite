@@ -1,0 +1,91 @@
+body{
+    font-family: 'poppins';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(104deg, #ff0000, #00ff00, #0000ff);
+        background-size: 180% 180%;
+        animation: gradient-animation 3s ease infinite;
+}
+.container {
+    border-radius: 50px;
+    padding: 3.3%;
+    border-style: double;
+    border-color: black;
+    background-image: url('/media/75Mr.gif');
+    background-size: cover;
+}
+h1,h2,h3 {
+    text-align: center;
+}
+
+h1{
+    font-weight: 900;
+    font-size: 70px;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+h3 {
+    font-weight: 300;
+}
+
+#button-nao{
+    margin-left: 12%;
+    position: absolute;
+}
+
+button {
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-size: 30px;
+    font-family: 'poppins';
+    height: 50px;
+    width: 200px;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+#animated {
+    animation-name: tilt-n-move-shaking;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        cursor: pointer;
+}
+
+@keyframes tilt-n-move-shaking {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(5px, 5px) rotate(5deg);
+    }
+    50% {
+        transform: translate(0, 0) rotate(0eg);
+    }
+    75% {
+        transform: translate(-5px, 5px) rotate(-5deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
